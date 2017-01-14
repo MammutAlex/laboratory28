@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/laboratory28":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/laboratory28","hostpath":"/home/mammut/Code/IKD/laboratory28","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/mammut/Code/IKD/laboratory28","disabled":false,"__vagrantfile":true}}}
