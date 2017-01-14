@@ -13,7 +13,32 @@ require('laravel-elixir-vue-2');
  |
  */
 
-elixir((mix) => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+elixir(function(mix) {
+    mix.styles([
+        'bootstrap.css',
+        'font-awesome.min.css',
+        'ionicons.css',
+        'prettyPhoto.css',
+        'YTPlayer.css',
+        'jssocials.css',
+        'jssocials-theme-flat.css',
+        'preset.css',
+        'animate.css',
+        'style.css',
+        'responsive.css'
+    ]).webpack([
+        'web/jquery.js',
+        'web/bootstrap.js',
+        'web/gmaps.js',
+        'web/appear.js',
+        'web/jquery.prettyPhoto.js',
+        'web/mixer.js',
+        'web/wow.min.js',
+        'web/jquery.sudoSlider.min.js',
+        'web/jquery.easing.min.js',
+        'web/jquery.easypiechart.js',
+        'web/jquery.mb.YTPlayer.min.js',
+        'web/jssocials.min.js',
+        'web/theme.js'
+    ]);
 });
