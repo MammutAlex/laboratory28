@@ -9,6 +9,8 @@
         "laravel/framework": "5.3.*"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^2.3",
+        "barryvdh/laravel-ide-helper": "^2.2",
         "fzaninotto/faker": "~1.4",
         "laravel/homestead": "^4.0",
         "mockery/mockery": "0.9.*",
