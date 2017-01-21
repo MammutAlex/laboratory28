@@ -24,6 +24,13 @@ class LoginController extends Controller
 		return view('auth.login');
 	}
 
+	/**
+	 * Login user and redirect to admin panel
+	 *
+	 * @param Request $request
+	 *
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
 	public function login(Request $request)
 	{
 		$this->validate($request, [
@@ -32,7 +39,7 @@ class LoginController extends Controller
 		]);
 
 		if(auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
-			return redirect('/admin');
+			return redirect($this->redirectTo);
 		}
 
 		return redirect()->back()->with('error', 'Невірний логін чи пароль');

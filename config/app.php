@@ -163,9 +163,10 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Package Service Providers...
-         */
+	    /*
+		 * SleepingOwl Service Provider
+		 */
+	    SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
 
         //dev
 	    Barryvdh\Debugbar\ServiceProvider::class,

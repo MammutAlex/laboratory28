@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function() {
-	return view('web.index');
-})->name('index');
+Route::get('/', 'WelcomeController@index')->name('index');
 
 Route::get('/about', function() {
 	return view('web.about');

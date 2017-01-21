@@ -14,22 +14,13 @@
     </section>
     <section class="sliderArea">
         <div id="homeSlider">
-            <div class="sliderImg" data-effect="blinds2" data-speed="2000">
-                <img src="images/slider/slider1.jpg" alt="">
-            </div>
-            <div class="sliderImg" data-effect="boxRandomFlyIn" data-speed="2000">
-                <img src="images/slider/slider2.jpg" alt="">
-            </div>
-            <div class="sliderImg" data-effect="unzipDown" data-speed="2000">
-                <img src="images/slider/slider3.jpg" alt="">
-            </div>
+            @foreach($images as $image)
+                <div class="sliderImg" data-effect="blinds2" data-speed="2000">
+                    <img src="{{url($image->image)}}" alt="{{$image->text}}">
+                </div>
+            @endforeach
         </div>
-        <ul class="sliderBtn">
-            <li class="customLink" data-target="1"></li>
-            <li class="customLink" data-target="2"></li>
-            <li class="customLink" data-target="3"></li>
-        </ul>
-        <a href="#work" class="downArrow"><i class="ion-android-arrow-down"></i></a>
+        <a href="#whatdo" class="downArrow"><i class="ion-android-arrow-down"></i></a>
     </section>
     <section class="whatWeDoArea" id="whatdo">
         <div class="container">
