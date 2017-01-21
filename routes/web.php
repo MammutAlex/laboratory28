@@ -11,30 +11,33 @@
 |
 */
 
-Route::get('/', function () {
-    return view('web.index');
+Route::get('/', function() {
+	return view('web.index');
 })->name('index');
 
-Route::get('/about', function () {
-    return view('web.about');
+Route::get('/about', function() {
+	return view('web.about');
 })->name('about');
 
-Route::get('/seminars', function () {
-    return view('web.seminars');
+Route::get('/seminars', function() {
+	return view('web.seminars');
 })->name('seminars');
 
-Route::get('/publications', function () {
-    return view('web.publications');
+Route::get('/publications', function() {
+	return view('web.publications');
 })->name('publications');
 
-Route::get('/lectures', function () {
-    return view('web.lectures');
+Route::get('/lectures', function() {
+	return view('web.lectures');
 })->name('lectures');
 
-Route::get('/news', function () {
-    return view('web.news');
+Route::get('/news', function() {
+	return view('web.news');
 })->name('news');
 
-Route::get('/links', function () {
-    return view('web.links');
+Route::get('/links', function() {
+	return view('web.links');
 })->name('links');
+
+Route::get('/login', 'Auth\LoginController@show')->name('login');
+Route::post('/login', 'Auth\LoginController@login')->name('loginPost');
