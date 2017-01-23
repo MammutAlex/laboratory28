@@ -4,7 +4,7 @@ use App\IndexImage;
 use SleepingOwl\Admin\Model\ModelConfiguration;
 
 AdminSection::registerModel(IndexImage::class, function(ModelConfiguration $model) {
-	$model->setTitle('Companies');
+	$model->setTitle('Слайдер');
 
 	// Display
 	$model->onDisplay(function() {
@@ -28,6 +28,4 @@ AdminSection::registerModel(IndexImage::class, function(ModelConfiguration $mode
 
 		return $form;
 	});
-})
-	->addMenuPage(IndexImage::class, 0)
-	->setIcon('fa fa-bank');
+});

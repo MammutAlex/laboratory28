@@ -1,17 +1,20 @@
 <?php
 
+use App\IndexImage;
+use App\WhatDo;
 use SleepingOwl\Admin\Navigation\Page;
 
 return [
 	[
-		'title' => 'Dashboard',
+		'title' => 'Головна сторінка',
 		'icon'  => 'fa fa-dashboard',
-		'url'   => route('admin.dashboard'),
-	],
-
-	[
-		'title' => 'Information',
-		'icon'  => 'fa fa-exclamation-circle',
-		'url'   => route('admin.information'),
-	],
+		'pages' => [
+			(new Page(IndexImage::class))
+				->setIcon('fa fa-file-image-o')
+				->setPriority(0),
+			(new Page(WhatDo::class))
+				->setIcon('fa fa-university')
+				->setPriority(0),
+		]
+	]
 ];

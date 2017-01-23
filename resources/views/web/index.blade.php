@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
-                    <p>
-                    <h1>Лабораторія супутникових досліджень ближнього космосу</h1></p>
+                    <h1>{{trans('web.index.title')}}</h1>
+                    <hr>
                     <p>Інститут космічних досліджень</p>
                 </div>
             </div>
@@ -37,63 +37,28 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row widget">
-                <div class="col-lg-12 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration="700ms"
-                     data-wow-delay="300ms">
-                    <div class="blogPostContent">
-                        <div class="smallAuthor pull-left">
-                            <img src="images/blog/author2.jpg" alt="">
+            @foreach($whatDoes as $whatDoe)
+                <div class="row widget">
+                    <div class="col-lg-12">
+                        <div class="callToTwoArea wow fadeInUp animated" data-wow-duration="700ms"
+                             data-wow-delay="300ms"
+                             style="visibility: visible; animation-duration: 700ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-4 col-xs-12">
+                                    <div class="infoIcon pull-left">
+                                        <img src="/{{$whatDoe->image}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-sm-8 col-xs-12">
+                                    <p class="callTwoDesc pull-left">
+                                        {{$whatDoe->text()}}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blogPost pull-left">
-                            <p>
-                                Обробка та аналіз даних супутникових спостережень, спрямованих на вивчення іоносфери –
-                                серії
-                                проектів НАСА “Atmosphere Explorer” та “Dynamics Explorer”, серії експериментів на
-                                українських апаратах “Січ”, французького DEMETER та інше
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row widget">
-                <div class="col-lg-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="300ms">
-                    <div class="blogPostContent">
-                        <div class="smallAuthor pull-right">
-                            <img src="images/blog/author2.jpg" alt="">
-                        </div>
-                        <div class="blogPost pull-left">
-                            <p>
-                                Теоретичне дослідження динамічних процесів в верхній атмосфері та іоносфері
-                                Землі – атмосферних гравітаційних хвиль, магнітогідродинамічних хвиль, радіочастотних
-                                плазмових емісій та інше
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row widget">
-                <div class="col-lg-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="300ms">
-                    <div class="blogPostContent">
-                        <div class="smallAuthor pull-left">
-                            <img src="images/blog/author2.jpg" alt="">
-                        </div>
-                        <div class="blogPost pull-left">
-                            <p>
-                                Підготовка та здійснення національних проектів в галузі досліджень ближнього космосу –
-                                проектів “Варіант”, “Потенціал”, “Іоносат” та інше
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section class="newsArea" id="news">
