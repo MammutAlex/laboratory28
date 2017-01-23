@@ -1,5 +1,6 @@
 <?php
 
+use App\About;
 use App\IndexImage;
 use App\IndexVideo;
 use App\News;
@@ -27,6 +28,9 @@ return [
 	 'pages' => [
 		 (new Page(News::class))
 			 ->setIcon('fa fa-newspaper-o')
+			 ->setPriority(0),
+		 (new Page(About::class))
+			 ->setIcon('fa fa-grav')
 			 ->setPriority(0)
 	 ]
 	]

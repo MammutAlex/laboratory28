@@ -13,11 +13,8 @@
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 
 Route::get('/', 'WelcomeController@index')->name('index');
+Route::get('/about', 'WelcomeController@about')->name('about');
 Route::resource('/news', 'NewsController');
-
-Route::get('/about', function() {
-	return view('web.about');
-})->name('about');
 
 Route::get('/seminars', function() {
 	return view('web.seminars');
