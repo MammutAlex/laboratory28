@@ -16,7 +16,7 @@ class CreateIndexImagesTable extends Migration
 		Schema::create('index_images', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('image');
-			$table->string('title');
+			$table->string('title')->nullable();
 			$table->timestamps();
 		});
 	}

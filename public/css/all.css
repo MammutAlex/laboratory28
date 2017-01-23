@@ -12631,9 +12631,6 @@ div.pp_default .pp_close{
     position: relative;
     overflow: hidden;
 }
-#bigDream{
-    background: url(../images/bg/bigDream.jpg) no-repeat scroll center center / cover !important;
-}
 .bigDreamArea.videoPlaying .overlay{
     display: none;
 }

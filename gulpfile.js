@@ -31,7 +31,6 @@ elixir(function(mix) {
         'web/bootstrap.js',
         'web/gmaps.js',
         'web/appear.js',
-        'web/jquery.prettyPhoto.js',
         'web/mixer.js',
         'web/wow.min.js',
         'web/jquery.sudoSlider.min.js',

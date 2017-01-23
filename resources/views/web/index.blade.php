@@ -69,40 +69,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <div class="newsContent text-center">
-                        <img src="images/blog/news1.jpg" alt="">
-                        <div class="news">
-                            <h2><a href="newsCategory.html">Good news from Spire</a></h2>
-                            <a href="#">24 april 2015</a>
-                            <p>Aliquam tincidunt risus leo, condimentum feugiat nisl commodo ac.</p>
+                @foreach($news as $article)
+                    <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="700ms"
+                         data-wow-delay="300ms">
+                        <div class="newsContent text-center">
+                            <img src="/{{$article->image}}">
+                            <div class="news">
+                                <h2>
+                                    <a href="{{route('news.show',['id'=>$article->id])}}">
+                                        {{$article->title()}}
+                                    </a>
+                                </h2>
+                                <a href="{{route('news.show',['id'=>$article->id])}}">
+                                    {{$article->date}}
+                                </a>
+                                <p>{{$article->description()}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="350ms">
-                    <div class="newsContent text-center">
-                        <img src="images/blog/news2.jpg" alt="">
-                        <div class="news">
-                            <h2><a href="newsCategory.html">TOP 10 <br>apps ever</a></h2>
-                            <a href="#">22 april 2015</a>
-                            <p>Maecenas verve leo, vehicula eu enim vel, commodo viverra sense.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
-                    <div class="newsContent text-center">
-                        <img src="images/blog/news3.jpg" alt="">
-                        <div class="news last">
-                            <h2><a href="newsCategory.html">Free premium design for <br>free</a></h2>
-                            <a href="#">18 april 2015</a>
-                            <p>Vestibulum in ipsum nisi. Phasellus vitae placerat nunc, eget egestas risus.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="450ms">
-                    <a href="newsCategory.html" class="readMore">More</a>
+                    <a href="{{route('news.index')}}" class="readMore">More</a>
                 </div>
             </div>
         </div>
@@ -110,14 +99,14 @@
     <section class="bigDreamArea">
         <div class="overlay black"></div>
         <div class="videoEmbed" id="bigDream"
-             data-property="{videoURL:'https://youtu.be/k1Dt4YvQwTM',showControls:false,containment:'self',autoPlay:false, loop:true, mute:true, startAt:2, opacity:1,}"></div>
+             data-property="{videoURL:'{{$video->video}}',showControls:false,containment:'self',autoPlay:false, loop:true, mute:true, startAt:2, opacity:1,}"></div>
         <div class="container dreamZindex">
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-7 col-sm-12 col-xs-12 text-center wow fadeInUp"
                      data-wow-duration="700ms"
                      data-wow-delay="300ms">
                     <div class="bigDream">
-                        <h1>Big dreams</h1>
+                        <h1>{{$video->title()}}</h1>
                         <a href="#" class="dreamBtn"><i class="ion-ios-play"></i><span>Watch</span></a>
                     </div>
                 </div>

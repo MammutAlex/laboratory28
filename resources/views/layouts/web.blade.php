@@ -42,9 +42,9 @@
                 </ul>
             </div>
             <div class="col-lg-5 col-sm-4 col-xs-9 text-left">
-                <a href="index.html" class="logoArea">
+                <a href="{{route('index')}}" class="logoArea">
                     <div class="logoImg pull-left">
-                        <img src="images/logo.png" alt="">
+                        <img src="/images/logo.png" alt="">
                     </div>
                     <h1 class="pull-left">PsiHi</h1>
                     <div class="clearfix"></div>
@@ -165,7 +165,7 @@
                     <div class="logoImg pull-left">
                         <img src="images/logo.png" alt="">
                     </div>
-                    <h1 class="pull-left"><a href="index.html">spire</a></h1>
+                    <h1 class="pull-left"><a href="{{route('index')}}">PsiHi</a></h1>
                 </div>
                 <!-- ===================== Back To Top ======================= -->
                 <a href="#" id="backTo"><i class="ion-ios-arrow-up"></i></a>

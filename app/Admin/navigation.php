@@ -1,6 +1,7 @@
 <?php
 
 use App\IndexImage;
+use App\IndexVideo;
 use App\News;
 use App\WhatDo;
 use SleepingOwl\Admin\Navigation\Page;
@@ -15,6 +16,9 @@ return [
 				->setPriority(0),
 			(new Page(WhatDo::class))
 				->setIcon('fa fa-university')
+				->setPriority(0),
+			(new Page(IndexVideo::class))
+				->setIcon('fa fa-youtube-play')
 				->setPriority(0),
 		]
 	],
