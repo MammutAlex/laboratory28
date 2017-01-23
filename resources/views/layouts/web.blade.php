@@ -74,7 +74,7 @@
                         <li class="scroll"><a href="{{route('about')}}">Про нас</a></li>
                         <li class="scroll"><a href="{{route('seminars')}}">Семінари</a></li>
                         <li class="scroll"><a href="{{route('publications')}}">Публікації</a></li>
-                        <li class="scroll"><a href="{{route('lectures')}}">Лекції</a></li>
+                        <li class="scroll"><a href="{{route('lectures.index')}}">Лекції</a></li>
                         <li class="scroll"><a href="{{route('news.index')}}">Новини</a></li>
                         <li class="scroll"><a href="{{route('links')}}">Посилання</a></li>
                         <li class="hasChild">

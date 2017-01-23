@@ -38,3 +38,19 @@ $factory->define(App\News::class, function(Faker\Generator $faker) {
 		'date'           => $faker->date($format = 'Y-m-d', $max = 'now'),
 	];
 });
+$factory->define(App\Lecture::class, function(Faker\Generator $faker) {
+	return [
+		'title_en'       => $faker->text($maxNbChars = 20),
+		'title_ru'       => $faker->text($maxNbChars = 20),
+		'title_uk'       => $faker->text($maxNbChars = 20),
+		'description_en' => $faker->text($maxNbChars = 50),
+		'description_ru' => $faker->text($maxNbChars = 50),
+		'description_uk' => $faker->text($maxNbChars = 50),
+		'text_en'        => $faker->text($maxNbChars = 1500),
+		'text_ru'        => $faker->text($maxNbChars = 1500),
+		'text_uk'        => $faker->text($maxNbChars = 1500),
+		'image'          => 'images/newspage/news.jpg',
+		'published'      => true,
+		'date'           => $faker->date($format = 'Y-m-d', $max = 'now'),
+	];
+});

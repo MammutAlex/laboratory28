@@ -15,15 +15,12 @@ Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@
 Route::get('/', 'WelcomeController@index')->name('index');
 Route::get('/about', 'WelcomeController@about')->name('about');
 Route::get('/publications', 'WelcomeController@publications')->name('publications');
+Route::resource('/lectures', 'LectureController');
 Route::resource('/news', 'NewsController');
 
 Route::get('/seminars', function() {
 	return view('web.seminars');
 })->name('seminars');
-
-Route::get('/lectures', function() {
-	return view('web.lectures');
-})->name('lectures');
 
 Route::get('/links', function() {
 	return view('web.links');

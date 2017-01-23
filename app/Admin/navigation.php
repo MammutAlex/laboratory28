@@ -3,6 +3,7 @@
 use App\About;
 use App\IndexImage;
 use App\IndexVideo;
+use App\Lecture;
 use App\News;
 use App\Publication;
 use App\WhatDo;
@@ -35,6 +36,9 @@ return [
 			 ->setPriority(0),
 		 (new Page(Publication::class))
 			 ->setIcon('fa fa-wpexplorer')
+			 ->setPriority(0),
+		 (new Page(Lecture::class))
+			 ->setIcon('fa fa-graduation-cap')
 			 ->setPriority(0),
 	 ]
 	]

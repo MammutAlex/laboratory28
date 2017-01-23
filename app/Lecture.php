@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class Lecture extends Model
 {
 	use Polyglot;
-
 	/**
 	 * Translation title data
 	 *

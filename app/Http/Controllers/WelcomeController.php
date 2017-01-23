@@ -39,6 +39,11 @@ class WelcomeController extends Controller
 		]);
 	}
 
+	/**
+	 * View publications page
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function publications()
 	{
 		$publications = Publication::get();
