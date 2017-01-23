@@ -72,7 +72,7 @@
                     <ul class="menus">
                         <li class="scroll"><a href="{{route('index')}}">Домашня</a></li>
                         <li class="scroll"><a href="{{route('about')}}">Про нас</a></li>
-                        <li class="scroll"><a href="{{route('seminars')}}">Семінари</a></li>
+                        <li class="scroll"><a href="{{route('seminars.index')}}">Семінари</a></li>
                         <li class="scroll"><a href="{{route('publications')}}">Публікації</a></li>
                         <li class="scroll"><a href="{{route('lectures.index')}}">Лекції</a></li>
                         <li class="scroll"><a href="{{route('news.index')}}">Новини</a></li>

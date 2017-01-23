@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lecture extends Model
 {
 	use Polyglot;
+
 	/**
 	 * Translation title data
 	 *
@@ -37,13 +38,32 @@ class Lecture extends Model
 		return $this->translation('text');
 	}
 
+	/**
+	 * Filter if lecture published
+	 *
+	 * @return mixed
+	 */
 	public static function wherePublished()
 	{
 		return self::where('published', true);
 	}
 
+	/**
+	 * Get dates
+	 * @return array
+	 */
 	public function getDates()
 	{
 		return array_merge(parent::getDates(), ['date']);
+	}
+
+	/**
+	 * Belongs to category
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function category()
+	{
+		return $this->belongsTo(Category::class);
 	}
 }

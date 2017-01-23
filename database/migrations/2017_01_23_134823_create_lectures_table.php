@@ -15,18 +15,27 @@ class CreateLecturesTable extends Migration
     {
         Schema::create('lectures', function (Blueprint $table) {
             $table->increments('id');
-	        $table->string('title_en');
-	        $table->string('title_ru');
-	        $table->string('title_uk');
-	        $table->string('description_en');
-	        $table->string('description_ru');
-	        $table->string('description_uk');
-	        $table->text('text_en');
-	        $table->text('text_ru');
-	        $table->text('text_uk');
-	        $table->string('image');
-	        $table->date('date');
-	        $table->boolean('published');
+	        $table->integer('author_id')->nullable();
+	        $table->integer('category_id')->nullable();
+	        $table->string('title_en')->nullable();
+	        $table->string('title_ru')->nullable();
+	        $table->string('title_uk')->nullable();
+	        $table->string('title2_en')->nullable();
+	        $table->string('title2_ru')->nullable();
+	        $table->string('title2_uk')->nullable();
+	        $table->string('description_en')->nullable();
+	        $table->string('description_ru')->nullable();
+	        $table->string('description_uk')->nullable();
+	        $table->text('text_en')->nullable();
+	        $table->text('text_ru')->nullable();
+	        $table->text('text_uk')->nullable();
+	        $table->text('text2_en')->nullable();
+	        $table->text('text2_ru')->nullable();
+	        $table->text('text2_uk')->nullable();
+	        $table->string('image')->nullable();
+	        $table->string('video')->nullable();
+	        $table->date('date')->nullable();
+	        $table->boolean('published')->nullable();
             $table->timestamps();
         });
     }

@@ -1,11 +1,19 @@
 <?php
 
 use App\About;
+use App\Author;
 use App\IndexImage;
 use App\IndexVideo;
 use App\Lecture;
+use App\Category;
+use App\Message;
 use App\News;
+use App\Partner;
 use App\Publication;
+use App\Quote;
+use App\Review;
+use App\Seminar;
+use App\Team;
 use App\WhatDo;
 use SleepingOwl\Admin\Navigation\Page;
 
@@ -38,6 +46,30 @@ return [
 			 ->setIcon('fa fa-wpexplorer')
 			 ->setPriority(0),
 		 (new Page(Lecture::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Author::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Seminar::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Category::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Team::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Quote::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Review::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Partner::class))
+			 ->setIcon('fa fa-graduation-cap')
+			 ->setPriority(0),
+		 (new Page(Message::class))
 			 ->setIcon('fa fa-graduation-cap')
 			 ->setPriority(0),
 	 ]

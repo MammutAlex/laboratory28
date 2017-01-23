@@ -1,6 +1,8 @@
 <?php
 
 use App\Lecture;
+use App\Author;
+use App\Category;
 use SleepingOwl\Admin\Model\ModelConfiguration;
 
 AdminSection::registerModel(Lecture::class, function(ModelConfiguration $model) {
@@ -38,6 +40,20 @@ AdminSection::registerModel(Lecture::class, function(ModelConfiguration $model) 
 			AdminFormElement::columns()
 				->addColumn(function() {
 					return [
+						AdminFormElement::text('title2_en', 'Під-загаловок (en)')->required(),
+					];
+				})->addColumn(function() {
+					return [
+						AdminFormElement::text('title2_ru', 'Під-загаловок (ru)')->required(),
+					];
+				})->addColumn(function() {
+					return [
+						AdminFormElement::text('title2_uk', 'Під-загаловок (uk)')->required(),
+					];
+				}),
+			AdminFormElement::columns()
+				->addColumn(function() {
+					return [
 						AdminFormElement::text('description_en', 'Короткий опис (en)')->required(),
 					];
 				})->addColumn(function() {
@@ -63,8 +79,25 @@ AdminSection::registerModel(Lecture::class, function(ModelConfiguration $model) 
 						AdminFormElement::wysiwyg('text_uk', 'Текст (uk)')->required(),
 					];
 				}),
+			AdminFormElement::columns()
+				->addColumn(function() {
+					return [
+						AdminFormElement::wysiwyg('text2_en', 'Текст під відео (en)')->required(),
+					];
+				})->addColumn(function() {
+					return [
+						AdminFormElement::wysiwyg('text2_ru', 'Текст під відео (ru)')->required(),
+					];
+				})->addColumn(function() {
+					return [
+						AdminFormElement::wysiwyg('text2_uk', 'Текст під відео (uk)')->required(),
+					];
+				}),
 			AdminFormElement::date('date', 'Дата')->required()->setFormat('Y-m-d'),
+			AdminFormElement::select('author_id', 'Автор')->setModelForOptions(new Author())->setDisplay('name_uk'),
+			AdminFormElement::select('category_id', 'Курс')->setModelForOptions(new Category())->setDisplay('title_uk'),
 			AdminFormElement::checkbox('published', 'Опубліковано'),
+			AdminFormElement::text('video', 'Відео'),
 			AdminFormElement::image('image', 'Фото')->required()
 		);
 

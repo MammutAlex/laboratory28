@@ -3899,3 +3899,6 @@ hgroup h4{
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+.seminars-image{
+    width: 50%;
+}

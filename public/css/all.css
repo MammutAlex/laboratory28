@@ -15770,6 +15770,9 @@ hgroup h4{
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+.seminars-image{
+    width: 50%;
+}
 /*
   Theme Name: Spire | Creative Agency HTML5 Responsive Template
   Theme URL: http://themewar.com/html/spire/
