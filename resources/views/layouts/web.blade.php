@@ -77,6 +77,20 @@
                         <li class="scroll"><a href="{{route('lectures')}}">Лекції</a></li>
                         <li class="scroll"><a href="{{route('news')}}">Новини</a></li>
                         <li class="scroll"><a href="{{route('links')}}">Посилання</a></li>
+                        <li class="hasChild">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <b class="caret"></b> {{ Config::get('languages')[App::getLocale()] }}
+                            </a>
+                            <ul class="dropDown">
+                                @foreach (Config::get('languages') as $lang => $language)
+                                    @if ($lang != App::getLocale())
+                                        <li>
+                                            <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
