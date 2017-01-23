@@ -13,7 +13,7 @@ AdminSection::registerModel(News::class, function(ModelConfiguration $model) {
 		})->setColumns([
 			AdminColumn::image('image')->setLabel('Зображення')->setWidth('100px'),
 			AdminColumn::link('title_uk')->setLabel('Загаловок'),
-			AdminColumn::datetime('date')->setLabel('Дата')->setFormat('d.m.Y')->setWidth('150px'),
+			AdminColumn::datetime('date')->setLabel('Дата')->setFormat('Y-m-d')->setWidth('150px'),
 			AdminColumnEditable::checkbox('published')->setLabel('Опубліковано'),
 		])->paginate(25);
 	});
@@ -63,7 +63,7 @@ AdminSection::registerModel(News::class, function(ModelConfiguration $model) {
 						AdminFormElement::wysiwyg('text_uk', 'Текст (uk)')->required(),
 					];
 				}),
-			AdminFormElement::date('date', 'Дата')->required()->setFormat('d.m.Y'),
+			AdminFormElement::date('date', 'Дата')->required()->setFormat('Y-m-d'),
 			AdminFormElement::checkbox('published', 'Опубліковано'),
 			AdminFormElement::image('image', 'Фото')->required()
 		);

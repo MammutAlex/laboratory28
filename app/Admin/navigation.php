@@ -4,6 +4,7 @@ use App\About;
 use App\IndexImage;
 use App\IndexVideo;
 use App\News;
+use App\Publication;
 use App\WhatDo;
 use SleepingOwl\Admin\Navigation\Page;
 
@@ -31,7 +32,10 @@ return [
 			 ->setPriority(0),
 		 (new Page(About::class))
 			 ->setIcon('fa fa-grav')
-			 ->setPriority(0)
+			 ->setPriority(0),
+		 (new Page(Publication::class))
+			 ->setIcon('fa fa-wpexplorer')
+			 ->setPriority(0),
 	 ]
 	]
 ];
