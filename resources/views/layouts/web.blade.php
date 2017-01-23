@@ -4,7 +4,7 @@
     <title>@yield('title')</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/all.css"/>
 
     <!-- Favicon Icon -->
     <link rel="icon" type="image/png" href="/images/logo.png">
@@ -75,7 +75,7 @@
                         <li class="scroll"><a href="{{route('seminars')}}">Семінари</a></li>
                         <li class="scroll"><a href="{{route('publications')}}">Публікації</a></li>
                         <li class="scroll"><a href="{{route('lectures')}}">Лекції</a></li>
-                        <li class="scroll"><a href="{{route('news')}}">Новини</a></li>
+                        <li class="scroll"><a href="{{route('news.index')}}">Новини</a></li>
                         <li class="scroll"><a href="{{route('links')}}">Посилання</a></li>
                         <li class="hasChild">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

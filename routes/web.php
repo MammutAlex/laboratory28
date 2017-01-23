@@ -13,6 +13,7 @@
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 
 Route::get('/', 'WelcomeController@index')->name('index');
+Route::resource('/news', 'NewsController');
 
 Route::get('/about', function() {
 	return view('web.about');
@@ -29,10 +30,6 @@ Route::get('/publications', function() {
 Route::get('/lectures', function() {
 	return view('web.lectures');
 })->name('lectures');
-
-Route::get('/news', function() {
-	return view('web.news');
-})->name('news');
 
 Route::get('/links', function() {
 	return view('web.links');

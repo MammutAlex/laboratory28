@@ -1,6 +1,7 @@
 <?php
 
 use App\IndexImage;
+use App\News;
 use App\WhatDo;
 use SleepingOwl\Admin\Navigation\Page;
 
@@ -16,5 +17,13 @@ return [
 				->setIcon('fa fa-university')
 				->setPriority(0),
 		]
+	],
+	['title' => 'Записи',
+	 'icon'  => 'fa fa-dashboard',
+	 'pages' => [
+		 (new Page(News::class))
+			 ->setIcon('fa fa-newspaper-o')
+			 ->setPriority(0)
+	 ]
 	]
 ];
