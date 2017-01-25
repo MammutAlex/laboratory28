@@ -12,7 +12,7 @@
                             <li><span class="dot"></span></li>
                             <li>Blog</li>
                         </ul>
-                        <h1>Blog</h1>
+                        <h1>{{$globals->lecture_title()}}</h1>
                     </div>
                 </div>
             </div>

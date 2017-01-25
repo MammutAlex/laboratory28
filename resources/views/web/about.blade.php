@@ -12,7 +12,7 @@
                             <li><span class="dot"></span></li>
                             <li>Про нас</li>
                         </ul>
-                        <h1>Інформація про лабораторію</h1>
+                        <h1>{{$globals->about_title()}}</h1>
                     </div>
                 </div>
             </div>

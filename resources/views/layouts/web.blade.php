@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/all.css"/>
-
-    <!-- Favicon Icon -->
     <link rel="icon" type="image/png" href="/images/logo.png">
-    <!-- Favicon Icon -->
 
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
@@ -34,12 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-3 col-xs-12 text-left hidden-lg hidden-md hidden-sm">
-                <ul class="socialIcon">
-                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
-                    <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                </ul>
+                @include('layouts.elements.social')
             </div>
             <div class="col-lg-5 col-sm-4 col-xs-9 text-left">
                 <a href="{{route('index')}}" class="logoArea">
@@ -51,11 +43,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-sm-5 col-xs-12 text-left hidden-xs">
-                <ul class="socialIcon">
-                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                </ul>
+                @include('layouts.elements.social')
             </div>
             <div class="col-lg-4 col-sm-3 col-xs-3">
                 <div class="menuBtn">
@@ -120,12 +108,9 @@
             <div class="col-lg-3 col-sm-3 col-lg-offset-1 col-sm-offset-1 col-xs-12 noPadding wow zoomIn"
                  data-wow-duration="700ms" data-wow-delay="300ms">
                 <div class="footerAbout">
-                    <h4>About us</h4>
+                    <h4>{{$globals->index_about_title()}}</h4>
                     <p>
-                        Kivamus vulputate vitae augue a ultrices. Vestibulum verve ipsum primis in
-                        faucibus orci luctus ultrices posuere cubilia Curae. Nam pretium turpis
-                        sense fringilla finibus. Nulla facilisi. Donec interdum nisl sit amet
-                        blandit dapibus.
+                        {{$globals->index_about_text()}}
                     </p>
                 </div>
             </div>
@@ -133,19 +118,7 @@
                  data-wow-duration="700ms" data-wow-delay="300ms">
                 <div class="footerSocial">
                     <h4>Stay tuned</h4>
-                    <ul>
-                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                        <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
-                        <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ion-social-vimeo"></i></a></li>
-                        <li><a href="#"><i class="ion-social-youtube"></i></a></li>
-                    </ul>
-                    <form action="#" class="footerSubScribe" method="post">
-                        <input type="email" id="footEmail" name="email" placeholder="Enter your e-mail">
-                        <button type="submit" id="footSubmit" name="subBtn"><i class="ion-ios-arrow-thin-right"></i>
-                        </button>
-                    </form>
+                    @include('layouts.elements.social')
                 </div>
             </div>
         </div>

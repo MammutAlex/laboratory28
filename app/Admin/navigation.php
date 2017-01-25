@@ -2,6 +2,7 @@
 
 use App\About;
 use App\Author;
+use App\Globals;
 use App\IndexImage;
 use App\IndexVideo;
 use App\Lecture;
@@ -19,17 +20,20 @@ use SleepingOwl\Admin\Navigation\Page;
 
 return [
 	[
-		'title' => 'Головна сторінка',
-		'icon'  => 'fa fa-dashboard',
+		'title' => 'Налаштування',
+		'icon'  => 'fa fa-bomb',
 		'pages' => [
 			(new Page(IndexImage::class))
-				->setIcon('fa fa-file-image-o')
+				->setIcon('fa fa-camera')
 				->setPriority(0),
 			(new Page(WhatDo::class))
-				->setIcon('fa fa-university')
+				->setIcon('fa fa-rocket')
 				->setPriority(0),
 			(new Page(IndexVideo::class))
 				->setIcon('fa fa-youtube-play')
+				->setPriority(0),
+			(new Page(Globals::class))
+				->setIcon('fa fa-globe')
 				->setPriority(0),
 		]
 	],

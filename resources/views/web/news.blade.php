@@ -12,7 +12,7 @@
                             <li><span class="dot"></span></li>
                             <li>News</li>
                         </ul>
-                        <h1>News</h1>
+                        <h1>{{$globals->news_title()}}</h1>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@
                             <li><span class="dot"></span></li>
                             <li>Семінари</li>
                         </ul>
-                        <h1>Саморозвиток лабораторії</h1>
+                        <h1>{{$globals->seminar_title()}}</h1>
                     </div>
                 </div>
             </div>
@@ -25,13 +25,14 @@
                 @if($key == 0)
                     <div class="row">
                         <div class="col-lg-8 col-sm-7 col-xs-12 text-center hidden-lg hidden-md hidden-sm">
-                                <img class="seminars-image" src="/{{$seminar->image}}">
+                            <img class="seminars-image" src="/{{$seminar->image}}">
                         </div>
                         <div class="col-lg-4 col-sm-6 col-xs-12 text-right noPaddingRight wow fadeInUp"
                              data-wow-duration="700ms"
                              data-wow-delay="300ms">
                             <div class="promoCont">
-                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a></h1>
+                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a>
+                                </h1>
                                 <p>
                                     {{$seminar->description()}}
                                 </p>
@@ -40,7 +41,7 @@
                         <div class="col-lg-8 col-sm-6 col-xs-12 text-right hidden-xs wow fadeInUp"
                              data-wow-duration="700ms"
                              data-wow-delay="350ms">
-                                <img class="seminars-image" src="/{{$seminar->image}}">
+                            <img class="seminars-image" src="/{{$seminar->image}}">
                         </div>
                     </div>
                     <hr>
@@ -53,7 +54,8 @@
                              data-wow-duration="700ms"
                              data-wow-delay="300ms">
                             <div class="promoCont">
-                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a></h1>
+                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a>
+                                </h1>
                                 <p>
                                     {{$seminar->description()}}
                                 </p>
@@ -70,7 +72,8 @@
                              data-wow-duration="700ms"
                              data-wow-delay="300ms">
                             <div class="promoCont">
-                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a></h1>
+                                <h1><a href="{{route('seminars.show',['id'=>$seminar->id])}}">{{$seminar->title()}}</a>
+                                </h1>
                                 <p>
                                     {{$seminar->description()}}
                                 </p>

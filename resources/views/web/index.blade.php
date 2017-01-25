@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
-                    <h1>{{trans('web.index.title')}}</h1>
+                    <h1>{{$globals->index_title()}}</h1>
                     <hr>
-                    <p>Інститут космічних досліджень</p>
+                    <p>{{$globals->index_sub_title()}}</p>
                 </div>
             </div>
         </div>
@@ -26,14 +26,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <h2 class="commonTittle">Що ми робимо?</h2>
+                    <h2 class="commonTittle">{{$globals->index_we_doing_title()}}</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                     <div class="commonTittle">
-                        <p>В нашому інституті іоносферні дослідження ведуться переважно в лабораторії супутникових
-                            досліджень ближнього космосу.</p>
+                        <p>{{$globals->index_we_doing_sub_title()}}</p>
                     </div>
                 </div>
             </div>
@@ -65,7 +64,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <h2 class="commonTittle">News</h2>
+                    <h2 class="commonTittle">{{$globals->index_news_title()}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                    <p>{{$globals->index_news_sub_title()}}</p>
                 </div>
             </div>
             <div class="row">
@@ -91,7 +95,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="450ms">
-                    <a href="{{route('news.index')}}" class="readMore">More</a>
+                    <a href="{{route('news.index')}}" class="readMore">{{$globals->index_news_more()}}</a>
                 </div>
             </div>
         </div>
@@ -107,7 +111,10 @@
                      data-wow-delay="300ms">
                     <div class="bigDream">
                         <h1>{{$video->title()}}</h1>
-                        <a href="#" class="dreamBtn"><i class="ion-ios-play"></i><span>Watch</span></a>
+                        <a href="#" class="dreamBtn">
+                            <i class="ion-ios-play"></i>
+                            <span>{{$globals->index_video_watch()}}</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -117,7 +124,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <h2 class="commonTittle white">Our team</h2>
+                    <h2 class="commonTittle white">{{$globals->index_about_as_title()}}</h2>
                 </div>
             </div>
             <div class="row">
@@ -233,7 +240,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <h2 class="commonTittle white">Clients</h2>
+                    <h2 class="commonTittle white">{{$globals->index_partner_title()}}</h2>
                 </div>
             </div>
             <div class="row">
@@ -390,7 +397,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                    <h2 class="commonTittle">Contact us</h2>
+                    <h2 class="commonTittle">{{$globals->index_contact_title()}}</h2>
                 </div>
             </div>
             <div class="row">
@@ -398,11 +405,11 @@
                      data-wow-delay="350ms">
                     <div class="phoneContact">
                         <i class="ion-iphone"></i>
-                        <h3>+1 888 123 45 67</h3>
+                        <h3>{{$globals->index_contact_phone}}</h3>
                         <i class="ion-android-mail"></i>
-                        <a href="mailto:info@spireoriginal.com">info@spireoriginal.com</a>
+                        <a href="mailto:{{$globals->index_contact_email}}">{{$globals->index_contact_email}}</a>
                         <i class="ion-ios-location"></i>
-                        <p>293 S Alameda st., Los Angeles, CA</p>
+                        <p>{{$globals->index_contact_address()}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">

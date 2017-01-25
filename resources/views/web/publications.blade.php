@@ -12,7 +12,7 @@
                             <li><span class="dot"></span></li>
                             <li>Публікації</li>
                         </ul>
-                        <h1>Публікації лабораторії</h1>
+                        <h1>{{$globals->publication_title()}}</h1>
                     </div>
                 </div>
             </div>
