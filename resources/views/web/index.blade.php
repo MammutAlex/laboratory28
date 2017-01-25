@@ -128,50 +128,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="300ms">
-                    <div class="singleTeam">
-                        <div class="teamImg">
-                            <img src="images/team/team1.jpg" alt="">
+                @foreach($teams as $team)
+                    <div class="col-lg-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
+                         data-wow-delay="300ms">
+                        <div class="singleTeam">
+                            <div class="teamImg">
+                                <img src="/{{$team->photo}}">
+                            </div>
+                            <h3>{{$team->first_name()}}<span>{{$team->last_name}}</span></h3>
+                            <span class="dot"></span>
+                            <p>{{$team->position()}}</p>
                         </div>
-                        <h3>Alexander<span>Solomon</span></h3>
-                        <span class="dot"></span>
-                        <p>CEO and founder</p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="350ms">
-                    <div class="singleTeam">
-                        <div class="teamImg">
-                            <img src="images/team/team2.jpg" alt="">
-                        </div>
-                        <h3>Kate<span>Smith</span></h3>
-                        <span class="dot"></span>
-                        <p>Designer</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="400ms">
-                    <div class="singleTeam">
-                        <div class="teamImg">
-                            <img src="images/team/team3.jpg" alt="">
-                        </div>
-                        <h3>Michael<span>Doe</span></h3>
-                        <span class="dot"></span>
-                        <p>App developer</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
-                     data-wow-delay="450ms">
-                    <div class="singleTeam">
-                        <div class="teamImg">
-                            <img src="images/team/team4.jpg" alt="">
-                        </div>
-                        <h3>Debbie<span>Brown</span></h3>
-                        <span class="dot"></span>
-                        <p>Manager</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -7,6 +7,7 @@ use App\IndexImage;
 use App\IndexVideo;
 use App\News;
 use App\Publication;
+use App\Team;
 use App\WhatDo;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class WelcomeController extends Controller
 			'whatDoes' => WhatDo::get(),
 			'news'     => News::wherePublished()->take(3)->get(),
 			'video'    => IndexVideo::first(),
+			'teams'    => Team::get(),
 		]);
 	}
 
@@ -52,6 +54,7 @@ class WelcomeController extends Controller
 			$yearsPublications = array_add($yearsPublications, $publication->date->year, []);
 			array_push($yearsPublications[$publication->date->year], $publication);
 		}
+
 		return view('web.publications', [
 			'publications' => $yearsPublications
 		]);

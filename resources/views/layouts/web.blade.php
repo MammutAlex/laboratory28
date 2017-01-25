@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{App::getLocale()}}">
 <head>
     <title>@yield('title')</title>
     <meta charset="UTF-8">
@@ -58,13 +58,12 @@
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12">
                     <ul class="menus">
-                        <li class="scroll"><a href="{{route('index')}}">Домашня</a></li>
-                        <li class="scroll"><a href="{{route('about')}}">Про нас</a></li>
-                        <li class="scroll"><a href="{{route('seminars.index')}}">Семінари</a></li>
-                        <li class="scroll"><a href="{{route('publications')}}">Публікації</a></li>
-                        <li class="scroll"><a href="{{route('lectures.index')}}">Лекції</a></li>
-                        <li class="scroll"><a href="{{route('news.index')}}">Новини</a></li>
-                        <li class="scroll"><a href="{{route('links')}}">Посилання</a></li>
+                        <li class="scroll"><a href="{{route('index')}}">{{trans('web.menu.index')}}</a></li>
+                        <li class="scroll"><a href="{{route('about')}}">{{trans('web.menu.about')}}</a></li>
+                        <li class="scroll"><a href="{{route('seminars.index')}}">{{trans('web.menu.seminars')}}</a></li>
+                        <li class="scroll"><a href="{{route('publications')}}">{{trans('web.menu.publications')}}</a></li>
+                        <li class="scroll"><a href="{{route('lectures.index')}}">{{trans('web.menu.lectures')}}</a></li>
+                        <li class="scroll"><a href="{{route('news.index')}}">{{trans('web.menu.news')}}</a></li>
                         <li class="hasChild">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <b class="caret"></b> {{ Config::get('languages')[App::getLocale()] }}
@@ -91,18 +90,14 @@
         <div class="row">
             <div class="col-lg-4 col-sm-4 col-xs-12 wow zoomIn" data-wow-duration="700ms" data-wow-delay="300ms">
                 <ul class="footerMenu pull-left text-left">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">What we do</a></li>
-                    <li><a href="#">Plans & Pricing</a></li>
-                    <li><a href="#">What is Spire</a></li>
+                    <li><a href="{{route('index')}}">{{trans('web.menu.index')}}</a></li>
+                    <li><a href="{{route('about')}}">{{trans('web.menu.about')}}</a></li>
+                    <li><a href="{{route('seminars.index')}}">{{trans('web.menu.seminars')}}</a></li>
                 </ul>
                 <ul class="footerMenu pull-right text-left">
-                    <li><a href="#">Our team</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="{{route('publications')}}">{{trans('web.menu.publications')}}</a></li>
+                    <li><a href="{{route('lectures.index')}}">{{trans('web.menu.lectures')}}</a></li>
+                    <li><a href="{{route('news.index')}}">{{trans('web.menu.news')}}</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-3 col-lg-offset-1 col-sm-offset-1 col-xs-12 noPadding wow zoomIn"
@@ -130,13 +125,12 @@
             <div class="col-lg-12 col-sm-12 col-xs-12">
                 <div class="copyText pull-left text-left wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                     <p>
-                        2015 Copyright - Spire theme.<br>
-                        All rights reserved. Developed by <a href="http://themewar.com">ThemeWar</a>.
+                        Developed by <a href="https://github.com/MammutCris">mammut</a>
                     </p>
                 </div>
                 <div class="footerLogo pull-left wow fadeInUp" data-wow-duration="700ms" data-wow-delay="350ms">
                     <div class="logoImg pull-left">
-                        <img src="images/logo.png" alt="">
+                        <img src="/{{$globals->logo}}">
                     </div>
                     <h1 class="pull-left"><a href="{{route('index')}}">PsiHi</a></h1>
                 </div>
