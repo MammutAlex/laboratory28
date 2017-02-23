@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use MammutAlex\Polyglot\Polyglot;
 
 class Globals extends Model
 {

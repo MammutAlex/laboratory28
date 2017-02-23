@@ -20,7 +20,7 @@ class WelcomeController extends Controller
 	 */
 	public function index()
 	{
-		return view('web.index', [
+		return view('site.about.index', [
 			'images'   => IndexImage::get(),
 			'whatDoes' => WhatDo::get(),
 			'news'     => News::wherePublished()->take(3)->get(),
